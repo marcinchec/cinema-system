@@ -1,6 +1,10 @@
 package umcs.cinemasystem.cinema;
 
+import java.util.List;
+
 public interface CinemaRepository {
 
-    void put(Cinema cinema);
+    void save(Cinema cinema);
+
+    List<Cinema> getAll();
 }

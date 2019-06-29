@@ -8,10 +8,10 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>umcs.cinema</groupId>
-	<artifactId>cinema</artifactId>
+    <groupId>umcs.cinemaH2</groupId>
+    <artifactId>cinemaH2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cinema system</name>
+    <name>cinemaH2 system</name>
 	<description>Cinema system project</description>
 
 	<properties>
@@ -37,8 +37,16 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
-		</dependency>
-	</dependencies>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
