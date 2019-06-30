@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface CinemaRepository {
 
-    void save(Cinema cinema);
+    Long save(Cinema cinema);
 
     List<Cinema> getAll();
 }

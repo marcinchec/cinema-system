@@ -16,8 +16,8 @@ public class H2MovieRepository implements MovieRepository {
     }
 
     @Override
-    public void save(Movie movie) {
-        this.repository.save(mapMovieToEntity(movie));
+    public Long save(Movie movie) {
+        return this.repository.save(mapMovieToEntity(movie)).getId();
     }
 
     @Override

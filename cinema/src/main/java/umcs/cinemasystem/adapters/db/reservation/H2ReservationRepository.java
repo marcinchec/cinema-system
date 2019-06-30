@@ -44,6 +44,16 @@ public class H2ReservationRepository implements ReservationRepository {
         this.repository.save(reservation);
     }
 
+    @Override
+    public Reservation getById(Long id) {
+        return mapEntityToReservation(this.repository.findById(id).orElseThrow(EntityNotFoundException::new));
+    }
+
+    @Override
+    public Long getId(String name, String surname) {
+        return this.repository.getId(name, surname);
+    }
+
     private ReservationH2 mapReservationToEntity(Reservation reservation) {
         ReservationH2 reservationH2 = new ReservationH2();
         reservationH2.setName(reservation.getName());

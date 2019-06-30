@@ -17,8 +17,8 @@ public class H2CinemaRepository implements CinemaRepository {
     }
 
     @Override
-    public void save(Cinema cinema) {
-        this.repository.save(mapCinemaToEntity(cinema));
+    public Long save(Cinema cinema) {
+        return this.repository.save(mapCinemaToEntity(cinema)).getId();
     }
 
     @Override

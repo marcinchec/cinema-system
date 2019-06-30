@@ -7,4 +7,8 @@ public interface ReservationRepository {
     CancellationToken getTokenById(Long id);
 
     void updateByStatus(Long id, ReservationStatus status);
+
+    Long getId(String name, String surname);
+
+    Reservation getById(Long id);
 }

@@ -28,8 +28,8 @@ public class H2ShowRepository implements ShowRepository {
     }
 
     @Override
-    public void save(Show show) {
-        this.repository.save(mapShowToEntity(show));
+    public Long save(Show show) {
+        return this.repository.save(mapShowToEntity(show)).getId();
     }
 
     @Override
