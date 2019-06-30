@@ -4,7 +4,7 @@ import umcs.cinemasystem.adapters.db.show.CinemaHall;
 
 public interface ShowRepository {
 
-    void save(Show show);
+    Long save(Show show);
 
     void update(Show show, Long id);
 

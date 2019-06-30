@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.concurrent.CancellationException;
 
 @Service
 public class ReservationService {
@@ -29,7 +30,8 @@ public class ReservationService {
         String requestedToken = token.getToken().trim();
         if (tokenDB.equals(requestedToken)) {
             this.reservationRepository.updateByStatus(id, ReservationStatus.CANCELLED);
-        }
+        } else
+            throw new CancellationException();
     }
 
     public void markAsPaid(Long id) {
