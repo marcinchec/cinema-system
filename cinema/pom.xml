@@ -8,10 +8,10 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-    <groupId>umcs.cinemaH2</groupId>
-    <artifactId>cinemaH2</artifactId>
+	<groupId>umcs.cinema</groupId>
+	<artifactId>cinema</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-    <name>cinemaH2 system</name>
+	<name>cinema system</name>
 	<description>Cinema system project</description>
 
 	<properties>
