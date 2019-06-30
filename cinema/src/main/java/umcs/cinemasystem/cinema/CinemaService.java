@@ -1,15 +1,23 @@
 package umcs.cinemasystem.cinema;
 
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+
+@Service
 public class CinemaService {
 
     private CinemaRepository cinemaRepository;
 
-    public void add(CinemaDto cinema) {
-        cinemaRepository.put(createCinema(cinema));
+    public CinemaService(CinemaRepository cinemaRepository) {
+        this.cinemaRepository = cinemaRepository;
     }
 
-    private Cinema createCinema(CinemaDto cinemaDto) {
-        return new Cinema(cinemaDto.city, cinemaDto.street);
+    public void add(Cinema cinema) {
+        cinemaRepository.save(cinema);
+    }
+
+    public List<Cinema> getAll() {
+        return cinemaRepository.getAll();
     }
 }
